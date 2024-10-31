@@ -55,10 +55,6 @@ export const siteConfig = {
         text: 'Talks',
         href: '/blog/talks',
       },
-      {
-        text: 'Projects',
-        href: '/projects',
-      },
     ],
   },
   page: {
