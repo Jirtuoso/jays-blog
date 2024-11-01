@@ -4,14 +4,9 @@ description: Throughout the past 4 years of my university career, I've worked 3 
 date: 08/23/2023
 tag: 2 min
 ---
-
-# My Journey Through Three Cities: From Vancouver to San Francisco
-
 Throughout the past 4 years of my university career, I've worked 3 internships in 3 drastically different cities - remote from Vancouver, hybrid from Toronto, and hybrid from San Francisco.
 
 San Francisco has been my favorite experience by far, simply because I was forced outside of my comfort zone. I had nobody in my rolodex in SF, yet I felt completely at home after 10 short weeks. Below is a non-exhaustive list of some activities, experiences, and methods to meet people that I hope can inspire you.
-
-## Adventures in San Francisco
 
 - DMed a guy on Reddit who was responding to a "How to meet recent college grads" in a r/askSF thread, who eventually introduced me to my two best SF friends.
 
@@ -37,8 +32,4 @@ San Francisco has been my favorite experience by far, simply because I was force
 
 - Didn't cook a single meal.
 
-## What's Next?
-
 I am leaving for Barcelona to study abroad in two weeks. Another dimension shift!
-
----
