@@ -16,7 +16,7 @@ collections:
     fields:
       - {label: 'Slug', name: 'slug', widget: 'string' }
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Time", name: "tags", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Time", name: "tag", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
