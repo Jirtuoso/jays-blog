@@ -13,6 +13,8 @@ html.dark {
 
 html:not(.dark) {
   color-scheme: light;
+  color: #5A5A5A;
+  background-color: #fffcf0
 }
 
 #nprogress {
