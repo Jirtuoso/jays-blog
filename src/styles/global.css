@@ -7,10 +7,6 @@ html.dark .astro-code span {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
-html.dark {
-  color-scheme: dark;
-}
-
 html:not(.dark) {
   color-scheme: light;
   color: #5A5A5A;
