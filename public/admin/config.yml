@@ -8,25 +8,14 @@ media_folder: "public"
 public_folder: "public"
 
 collections:
-  - name: "posts"
+  - name: "Blog Posts"
     label: "Blog Posts"
-    folder: "src/pages/posts"
+    folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Duration", name: "duration", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Time", name: "tags", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "about"
-        label: "About Page"
-        file: "src/pages/about.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
