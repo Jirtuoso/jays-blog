@@ -1,11 +1,11 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Jirtuoso/jay-vitesse-blog
   branch: main
   base_url: https://api.netlify.com
 
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "public"
+public_folder: "public"
 
 collections:
   - name: "posts"
