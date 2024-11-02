@@ -7,12 +7,6 @@ html.dark .astro-code span {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
-html:not(.dark) {
-  color-scheme: light;
-  color: #5A5A5A;
-  background-color: #fffcf0
-}
-
 #nprogress {
   pointer-events: none;
 }
@@ -59,4 +53,9 @@ html.dark::view-transition-old(root) {
 }
 html.dark::view-transition-new(root) {
   z-index: 1;
+}
+
+.dark .bg-main {
+    background-color: #123524 !important;
+    -un-bg-opacity: 1;
 }
