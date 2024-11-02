@@ -20,8 +20,8 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       themes: {
-        light: 'github-light-default',
-        dark: 'github-dark-default',
+        light: 'everforest-light',
+        dark: 'catppuccin-mocha',
       },
       wrap: true,
     },
