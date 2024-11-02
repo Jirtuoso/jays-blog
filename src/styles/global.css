@@ -59,3 +59,9 @@ html.dark::view-transition-new(root) {
     background-color: #123524 !important;
     -un-bg-opacity: 1;
 }
+
+.light .bg-main {
+    background-color: #FFFCF1 !important;
+    -un-bg-opacity: 1;
+}
+
