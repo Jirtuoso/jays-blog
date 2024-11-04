@@ -5,6 +5,8 @@ import BaseHead from '@/components/BaseHead.astro'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import ScrollToTop from '@/components/ScrollToTop.vue'
+import UmamiAnalytics from '@/components/UmamiAnalytics.astro';  // Add this line
+
 
 const { ...head } = Astro.props
 ---
@@ -24,6 +26,7 @@ const { ...head } = Astro.props
       <slot />
       <ScrollToTop client:load />
       <Footer />
+      <UmamiAnalytics />
     </main>
   </body>
 </html>
