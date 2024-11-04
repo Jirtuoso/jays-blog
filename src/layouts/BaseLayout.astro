@@ -26,5 +26,10 @@ const { ...head } = Astro.props
       <ScrollToTop client:load />
       <Footer />
     </main>
+    <script type="module">
+      window.addEventListener('astro:page-load', () => {
+          if (typeof umami !== 'undefined') {
+              umami.trackView(); // This tells Umami to track the page view
+          }
   </body>
 </html>
