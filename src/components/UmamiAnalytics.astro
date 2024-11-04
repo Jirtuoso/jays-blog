@@ -1,0 +1,45 @@
+---
+const websiteId = 'd4535116-b33e-433a-bfaf-8449e05d30f1'; // Replace with your Umami website ID
+const umamiScriptUrl = 'https://cloud.umami.is/script.js'; // Replace if using custom domain
+---
+
+<script define:vars={{ websiteId, umamiScriptUrl }}>
+// Initialize Umami
+const initUmami = () => {
+  const script = document.createElement('script');
+  script.setAttribute('src', umamiScriptUrl);
+  script.setAttribute('data-website-id', websiteId);
+  script.setAttribute('async', '');
+  script.setAttribute('defer', '');
+  document.head.appendChild(script);
+};
+
+// Track page views
+const trackPage = () => {
+  if (window.umami) {
+    const currentPath = window.location.pathname;
+    window.umami.track('pageview');
+  }
+};
+
+// Initialize on first load
+initUmami();
+
+// Listen for Astro page changes
+document.addEventListener('astro:page-load', () => {
+  // If Umami is already loaded, just track the page
+  if (window.umami) {
+    trackPage();
+  } else {
+    // If Umami isn't loaded yet (rare case), initialize and track
+    initUmami();
+    // Wait for Umami to load
+    const checkUmami = setInterval(() => {
+      if (window.umami) {
+        trackPage();
+        clearInterval(checkUmami);
+      }
+    }, 100);
+  }
+});
+</script>
