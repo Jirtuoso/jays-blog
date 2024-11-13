@@ -51,7 +51,7 @@ Moving on from anecdotes, consider this table from a 2022 study on happiness pub
 
 ![](public/good-life-chart.png)
 
-*Oishi, Westgate; A psychologically rich life: Beyond happiness and meaning. Psychological review 2021*
+<p style="text-align: center;"><em>Oishi, Westgate; A psychologically rich life: Beyond happiness and meaning. Psychological Review, 2021</em></p>
 
 A good life is scientifically proven to be far more multi-faceted than becoming rich, despite what the YouTube gurus say. The Measurements and the Facilitators differ across all three dimensions. You can go deep in one dimension (the “I” shape), or split your time between two (the “T” shape), but color me impressed if you’re able to track highly on all three. Franklin understood this chart on an intuitive level. The goal was never to make as much money as possible but to make the minimum amount to enable joy before working on another dimension with your limited time on Earth. The trap I was deluded into through modern content was believing that financial independence was the ultimate goal.
 
