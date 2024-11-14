@@ -1,6 +1,7 @@
 ---
+slug: post-5
 title: Speedrunning Europe; another list
-description: I took on student debt to go on Study Abroad in my final semester of college. 
+description: I took on student debt to go on Study Abroad in my final semester of college
 date: 12/30/2023
 tag: 2 min
 ---
