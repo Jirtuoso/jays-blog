@@ -11,7 +11,7 @@ However, not all of my parent’s artifacts were as defunct as the Encyclopedia.
 
 I’m sharing this experiment to illustrate just how distorted modern self-help content has become, and how some old books have expanded my views on financial independence and the definition of a good life.
 
-**Self-Help: Past & Present**
+#### **Self-Help: Past & Present**
 
 The ninth volume of the 1909 Young Folks Treasury (YFT) is labeled “Men and Women of Achievement; Self-Help.” As an avid addict of mental masturbation (excuse my language) and modern self-help content, I was curious to compare the genre between two snapshots in time. What I noticed was a complete shift in values I would argue has turned for the worse.
 
@@ -43,7 +43,7 @@ Lastly, one may critique that the YFT’s self-help articles were far more inspi
 
 My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks, and where ethics was even fractionally a part of the discussion. The ingredients for success haven’t changed. 
 
-**Role Models: Past & Present**
+#### **Role Models: Past & Present**
 
 Apart from the path to success, these old books have reshaped my destination as well. Success as glorified by flashy influencers is a lot less attractive when you’ve seen it in a different light, such as through Benjamin Franklin’s autobiography. Franklin started from humble beginnings as a successful operator of a printing press before shifting his focus from enterprise to politics, where his patriotism and conscientiousness left a legacy that has earned his visage on the $100 bill even today. Many entrepreneurs would have been satisfied with the profits from the press, but Franklin’s ultimate goal was impact, not comfort. It shows that the pursuit of financial independence represents only one challenge of the hydra-headed mess that is life. It is true that it often needs to be the first dragon slain, but perhaps the dragon doesn’t need to be as large as we imagine it to be. Franklin didn’t wait to become a billionaire before getting involved with his community.
 
@@ -57,7 +57,7 @@ A good life is scientifically proven to be far more multi-faceted than becoming 
 
 The closest example I could find from the YFT of a man achieving high levels of all three dimensions was in a biography of Samuel Morse. Morse began as a painter before inventing the telegraph through a stroke of electromagnetic genius. Before long, he achieved international fame, attained riches, and appeased his scientific curiosity to great effect. Note that the telegraph didn’t make him wealthy to the point where money starts accruing negative marginal utility; he passed with a net worth of around $10 MM in today’s terms, though certainly enough to live comfortably. Throughout his life, he also made sizeable philanthropic gifts to churches, universities, and bursaries for struggling artists, affecting his community in the ways he saw fit.
 
-**Finding New Perspectives**
+#### **Finding New Perspectives**
 
 Through my excavation in the garage, I was reminded of a more moral and realistic path to riches, and a set of historical role models that speak more to me than the idols on social media. If that seems somewhat anachronistic, then yes, I might be old-fashioned compared to some peers. I am convinced that it was the overconsumption of clickbait modern content that subconsciously led me to explore a different time period, and these books were just the catalyst.
 
