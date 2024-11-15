@@ -15,11 +15,6 @@ export const siteConfig = {
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
-    {
-      text: 'Youtube',
-      href: '',
-      icon: 'i-simple-icons-youtube',
-    },
   ],
   header: {
     logo: {
