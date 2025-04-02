@@ -35,13 +35,13 @@ Poverty is seen as neutral while making money for its own sake is actually conde
 
 Of course, shortcuts, exploits, windfalls, and lucky opportunities exist. Yet the era of clickbait has sold the narrative so strongly that many (young men especially) simply drift from trend to trend, running in circles to find the next life-changing shortcut. You might not be one of them, but ask yourself - do you want to live in a society where character is mentioned less and less? Where making money is uncorrelated, or even antonymous with producing real value?
 
-“Whenever a man who has risen from obscure poverty to great wealth dies, it is a common thing for young men to say: ‘Oh, yes, he started when there were lots of chances. But a man can’t do that sort of thing now.’”
+> “Whenever a man who has risen from obscure poverty to great wealth dies, it is a common thing for young men to say: ‘Oh, yes, he started when there were lots of chances. But a man can’t do that sort of thing now.’”
 
-What has not changed are the excuses. Whichever one you may choose, I can assure you that it has been used for hundreds of years, the excuses carry no weight and never will.
+What has not changed are the excuses. Whichever one you may choose, I can assure you that it has been used for hundreds of years; the excuses carry no weight and never will.
 
-Lastly, one may critique that the YFT’s self-help articles were far more inspirational than they were practical. That is undoubtedly true, and they should not be read literally. Yet there’s something very noble about them that scratches my moral inch inside, representing a step backward in the right direction. It has created in me a repulsion to the money-frantic, results-oriented self-help content that is ubiquitous on the internet today.
+Lastly, one may critique that the YFT’s self-help articles were far more inspirational than they were practical. That is undoubtedly true, and they should not be read literally. Yet there’s something very noble about them that scratches my moral itch inside, representing a step backward in the right direction. It has created in me a repulsion to the money-frantic, results-oriented self-help content that is ubiquitous on the internet today.
 
-My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks, and where ethics was even fractionally a part of the discussion. The ingredients for success haven’t changed. 
+My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks. The ingredients for success haven’t changed. 
 
 #### **Role Models: Past & Present**
 
@@ -55,10 +55,10 @@ Moving on from anecdotes, consider this table from a 2022 study on happiness pub
 
 A good life is scientifically proven to be far more multi-faceted than becoming rich, despite what the YouTube gurus say. The Measurements and the Facilitators differ across all three dimensions. You can go deep in one dimension (the “I” shape), or split your time between two (the “T” shape), but color me impressed if you’re able to track highly on all three. I realized that the goal is balance, to make *enough* to live a satisfactory lifestyle before shifting one's focus to another dimension. The trap I was deluded into through modern content was believing that financial independence was the ultimate goal.
 
-The closest example I could find from the YFT of a man achieving high levels of all three dimensions was in a biography of Samuel Morse. Morse began as a painter before inventing the telegraph through a stroke of electromagnetic genius. Before long, he achieved international fame, attained riches, and appeased his scientific curiosity to great effect. Note that the telegraph didn’t make him wealthy to the point where money starts accruing negative marginal utility; he passed with a net worth of around $10 MM in today’s terms, though certainly enough to live comfortably. Throughout his life, he also made sizeable philanthropic gifts to churches, universities, and bursaries for struggling artists, affecting his community in the ways he saw fit.
+The closest example I could find from the YFT of a man achieving high levels of all three dimensions was in a biography of Samuel Morse. Morse began as a painter before inventing the telegraph through a stroke of electromagnetic genius. Before long, he achieved international fame and riches, all while appeasing his scientific curiosity. Note that the telegraph didn’t make him wealthy to the point where money starts accruing negative marginal utility; he passed with a net worth of around $10 MM in today’s terms, though certainly enough to live comfortably. Throughout his life, he also made sizeable philanthropic gifts to churches, universities, and bursaries for struggling artists, affecting his community in the ways he saw fit.
 
 #### **Finding New Perspectives**
 
 Through my excavation in the garage, I was reminded of a more moral and realistic path to riches and a set of historical role models that speak more to me than the idols on social media. If that seems somewhat anachronistic, then yes, I might be old-fashioned compared to some peers. I am convinced that it was the overconsumption of clickbait modern content that subconsciously led me to explore a different time period, and these books were just the catalyst.
 
-If you want to taste like I did, try ordering some hundred-year-old books off eBay. Use our infinite technology to deliver something real and grounded right to your doorstep. Maybe get some thousand-year-old ones too (modern copies). Then, armed with perspectives that span the ages, both old and new… you can craft your Good Life too.
+Try ordering some hundred-year-old books off eBay. Use our infinite technology to deliver something real and grounded right to your doorstep. Maybe get some thousand-year-old ones too (modern copies). Then, armed with perspectives that span the ages, both old and new… you can craft your Good Life too.
