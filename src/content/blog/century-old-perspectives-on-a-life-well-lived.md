@@ -39,7 +39,7 @@ Of course, shortcuts, exploits, windfalls, and lucky opportunities exist. Yet th
 
 What has not changed are the excuses. Whichever one you may choose, I can assure you that it has been used for hundreds of years; the excuses carry no weight and never will.
 
-Lastly, one may critique that the YFT’s self-help articles were far more inspirational than they were practical. That is undoubtedly true, and they should not be read literally. Yet there’s something very noble about them that scratches my moral itch inside, representing a step backward in the right direction. It has created in me a repulsion to the money-frantic, results-oriented self-help content that is ubiquitous on the internet today.
+Lastly, one may critique that the YFT’s self-help articles were far more inspirational than they were practical. That is undoubtedly true, and they should not be read literally. Yet there’s something very noble about them that scratches my moral itch inside, representing a step backward in the right direction. It has created in me a repulsion to the money-frantic, shortcut-oriented self-help content that is ubiquitous on the internet today.
 
 My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks. The ingredients for success haven’t changed. 
 
