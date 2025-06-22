@@ -5,7 +5,7 @@ description: Some tactics to avoid getting scammed
 date: 2025-01-04T14:46:00.000Z
 tag: 5 min
 ---
-My Mom's 2010 Santa Fe SUV has served me incredibly well since I got my license five years ago. It has taken me to countless trailheads, ski mountains, and grocery stores. And yet, when it started to break down this year, I was completely helpless in taking care of it. The most advanced thing I can do with a car is spray the windshield cleaner. 
+My Mom's 2010 Santa Fe SUV has served me incredibly well since I got my license five years ago. It has taken me to countless trailheads, ski mountains, and grocery stores. And yet, when it started to break down this year, I was completely helpless in taking care of it. The most advanced thing I can do with a car is spray some windshield cleaner. 
 
 However, since then, I've negotiated with mechanics, tow trucks, and tire shops alike. I read negotiation books and happened to work a job cold-calling construction workers. These are the tips that have saved me thousands of dollars. 
 
