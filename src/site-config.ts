@@ -15,6 +15,11 @@ export const siteConfig = {
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
+     {
+      text: 'Linkedin',
+      href: 'https://linkedin.com/in/jaycbhou',
+      icon: 'i-simple-icons-linkedin',
+    },
   ],
   header: {
     logo: {
@@ -41,6 +46,10 @@ export const siteConfig = {
       {
         text: 'Notes',
         href: '/blog/notes',
+      },
+      {
+        text: 'Projects',
+        href: '/projects',
       },
     ],
   },
