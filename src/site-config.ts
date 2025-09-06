@@ -1,8 +1,8 @@
 export const siteConfig = {
   author: 'Jay Hou',
-  title: "Jay's golB",
-  subtitle: 'Self-help from an unqualified teacher',
-  description: 'Sharing some personal reflections to the world',
+  title: "Intro to Jay",
+  subtitle: 'About me',
+  description: 'Sharing some personal reflections with the world',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
