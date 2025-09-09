@@ -6,7 +6,7 @@ export const projectData: ProjectData = [
     projects: [
       {
         text: 'Cold Email Automation',
-        description: 'Used Instantly, Clay, PhantomBuster, and Instantly to cold email dental practices',
+        description: 'Used Instantly, Clay, and PhantomBuster to cold email dental practices',
         icon: 'i-carbon-campsite',
         href: '/',
       },
