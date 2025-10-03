@@ -20,8 +20,10 @@ const { path } = Astro.params
 
 const posts = await getPosts(path)
 
-function activeLink(pathname: string) {
-  return Astro.url.pathname.replace(/\/+/g, '/').replace(/\/$/, '') === pathname
+// Get the page title based on the path
+function getPageTitle() {
+  if (!path) return 'Blog'
+  return path.charAt(0).toUpperCase() + path.slice(1)
 }
 ---
 
@@ -31,18 +33,6 @@ function activeLink(pathname: string) {
   pageNav={true}
   pageOperate={true}
 >
-  <div class="flex flex-col gap-2 sm:flex-row sm:gap-4 flex-wrap mb-8">
-    {
-      siteConfig.page.blogLinks.map((nav) => (
-        <a
-          aria-label={nav.text}
-          class={`nav-link text-3xl font-bold ${activeLink(nav.href) ? 'opacity-80' : 'opacity-30 hover:opacity-50'}`}
-          href={nav.href}
-        >
-          {nav.text}
-        </a>
-      ))
-    }
-  </div>
+  <h1 class="mb-10 text-title">{getPageTitle()}</h1>
   <ListPosts list={posts} />
 </BaseLayout>

@@ -2,20 +2,24 @@
 import { useDark, useToggle } from '@vueuse/core'
 import { onMounted, watchEffect } from 'vue'
 
-const isDark = useDark()
+const isDark = useDark({ defaultValue: true })
 
 const toggleDark = useToggle(isDark)
 
 watchEffect(() => {
-  if (isDark.value) 
+  if (isDark.value)
     setDarkMode(document)
 })
 
 function setDarkMode(document: Document) {
   if (isDark.value)
     document.documentElement.classList.add('dark')
+  else
+    document.documentElement.classList.remove('dark')
 }
 onMounted(() => {
+  // Force dark mode on initial load
+  document.documentElement.classList.add('dark')
   document.addEventListener('astro:before-swap', (event) => {
     setDarkMode(event.newDocument)
   })
@@ -28,6 +32,7 @@ function toggleTheme(event: MouseEvent) {
     Math.max(x, innerWidth - x),
     Math.max(y, innerHeight - y),
   )
+
   // @ts-expect-error: Transition API
   if (!document.startViewTransition) {
     toggleDark()
@@ -49,8 +54,8 @@ function toggleTheme(event: MouseEvent) {
         clipPath: isDark.value ? [...clipPath].reverse() : clipPath,
       },
       {
-        duration: 400,
-        easing: 'ease-in',
+        duration: 300,
+        easing: 'ease-out',
         pseudoElement: isDark.value
           ? '::view-transition-old(root)'
           : '::view-transition-new(root)',

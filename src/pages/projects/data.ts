@@ -12,8 +12,8 @@ export const projectData: ProjectData = [
       },
     ],
   },
-   {
-    title: 'Random Content Creation',
+  {
+    title: 'Content',
     projects: [
       {
         text: 'Youtube Shorts',
@@ -23,7 +23,7 @@ export const projectData: ProjectData = [
       },
       {
         text: 'Guest Podcast',
-        description: "Reached out to guest-host an episode, back when I didn't have a professional mic yet",
+        description: 'Reached out to guest-host an episode, back when I didn\'t have a professional mic yet',
         icon: 'i-carbon-campsite',
         href: 'https://open.spotify.com/episode/4DpVZWZSwJqYE3pJwwH6wC',
       },
