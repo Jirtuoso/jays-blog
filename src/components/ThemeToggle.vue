@@ -1,28 +1,16 @@
 <script lang="ts" setup>
 import { useDark, useToggle } from '@vueuse/core'
-import { onMounted, watchEffect } from 'vue'
+import { onMounted } from 'vue'
 
-const isDark = useDark({ defaultValue: true })
-
+const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
-watchEffect(() => {
-  if (isDark.value)
-    setDarkMode(document)
-})
-
-function setDarkMode(document: Document) {
-  if (isDark.value)
-    document.documentElement.classList.add('dark')
-  else
-    document.documentElement.classList.remove('dark')
-}
 onMounted(() => {
-  // Force dark mode on initial load
-  document.documentElement.classList.add('dark')
-  document.addEventListener('astro:before-swap', (event) => {
-    setDarkMode(event.newDocument)
-  })
+  const stored = localStorage.getItem('vueuse-color-scheme')
+  if (!stored) {
+    // Default to light mode on first visit
+    isDark.value = false
+  }
 })
 
 function toggleTheme(event: MouseEvent) {
@@ -40,7 +28,7 @@ function toggleTheme(event: MouseEvent) {
   }
 
   // @ts-expect-error: Transition API
-  const transition = document.startViewTransition(async () => {
+  const transition = document.startViewTransition(() => {
     toggleDark()
   })
 
@@ -50,15 +38,11 @@ function toggleTheme(event: MouseEvent) {
       `circle(${endRadius}px at ${x}px ${y}px)`,
     ]
     document.documentElement.animate(
+      { clipPath },
       {
-        clipPath: isDark.value ? [...clipPath].reverse() : clipPath,
-      },
-      {
-        duration: 300,
+        duration: 400,
         easing: 'ease-out',
-        pseudoElement: isDark.value
-          ? '::view-transition-old(root)'
-          : '::view-transition-new(root)',
+        pseudoElement: '::view-transition-new(root)',
       },
     )
   })
@@ -66,5 +50,47 @@ function toggleTheme(event: MouseEvent) {
 </script>
 
 <template>
-  <button :aria-label="isDark ? 'Dark Theme' : 'Light Theme'" nav-link dark:i-ri-moon-line i-ri-sun-line @click="toggleTheme" />
+  <button
+    :aria-label="isDark ? 'Switch to Day' : 'Switch to Night'"
+    class="theme-btn"
+    nav-link
+    @click="toggleTheme"
+  >
+    <!-- Sun icon (visible in light mode) -->
+    <svg v-if="!isDark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+    <!-- Moon icon (visible in dark mode) -->
+    <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </button>
 </template>
+
+<style scoped>
+.theme-btn {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  margin-right: 1.5rem;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.theme-btn svg {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+}
+</style>

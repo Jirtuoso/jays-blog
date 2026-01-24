@@ -38,4 +38,21 @@ const blog = defineCollection({
   }),
 })
 
-export const collections = { pages, blog }
+const projects = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    category: z.string().optional(),
+    date: z
+      .string()
+      .or(z.date())
+      .transform((val: string | number | Date) => new Date(val).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      })),
+    redirect: z.string().optional(),
+  }),
+})
+
+export const collections = { pages, blog, projects }

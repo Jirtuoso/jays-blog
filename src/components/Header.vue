@@ -120,13 +120,38 @@ function toggleNavDrawer() {
 </template>
 
 <style scoped>
-.header-hide {
-  transform: translateY(-100%);
+#header {
   transition: transform 0.4s ease;
 }
 
-.header-bg-blur {
-  --at-apply: backdrop-blur-sm;
+#header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 50%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: -1;
+}
+
+.header-bg-blur::after {
+  opacity: 1;
+}
+
+.header-hide {
+  transform: translateY(-100%);
 }
 
 .nav-drawer {

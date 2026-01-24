@@ -42,8 +42,11 @@
   content: counter(list-item, var(--list-counter-style, decimal)) '.';
   position: absolute;
   font-weight: 400;
-  color: #6b7280;
+  color: #123524;
   left: 0;
+}
+.dark .prose ol > li::before {
+  color: #a8d5ba;
 }
 .prose ul > li {
   position: relative;
@@ -52,12 +55,15 @@
 .prose ul > li::before {
   content: '';
   position: absolute;
-  background-color: #d1d5db;
+  background-color: #123524;
   border-radius: 50%;
   width: 0.375em;
   height: 0.375em;
   top: calc(0.875em - 0.1875em);
   left: 0.25em;
+}
+.dark .prose ul > li::before {
+  background-color: #a8d5ba;
 }
 .prose hr {
   background-color: rgba(125, 125, 125, 0.3);

@@ -25,7 +25,7 @@ export const projectData: ProjectData = [
         text: 'Guest Podcast',
         description: 'Reached out to guest-host an episode, back when I didn\'t have a professional mic yet',
         icon: 'i-carbon-campsite',
-        href: 'https://open.spotify.com/episode/4DpVZWZSwJqYE3pJwwH6wC',
+        href: 'https://open.spotify.com/episode/4DpZVZWZSwJqYE3pJwwH6wC',
       },
     ],
   },

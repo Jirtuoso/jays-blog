@@ -12,7 +12,7 @@ import {
 export default defineConfig({
   shortcuts: [
     {
-      'bg-main': 'bg-hex-eef5fc dark:bg-hex-0d1117',
+      'bg-main': 'bg-hex-f5f0e8 dark:bg-hex-123524',
       'text-main': 'text-hex-555555 dark:text-hex-bbbbbb',
       'text-link': 'text-dark dark:text-white ',
       'border-main': 'border-truegray-300 dark:border-truegray-600',
@@ -59,5 +59,11 @@ export default defineConfig({
     'i-simple-icons-sinaweibo',
     'i-ri-github-line',
     'i-ri-twitter-x-line',
+    'i-ri-moon-fill',
+    'i-ri-sun-fill',
+    'i-ri-moon-line',
+    'i-ri-sun-line',
+    'dark:i-ri-moon-line',
+    'i-ri-external-link-line',
   ],
 })

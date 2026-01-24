@@ -22,14 +22,14 @@ const posts = await getPosts(path)
 
 // Get the page title based on the path
 function getPageTitle() {
-  if (!path) return 'Blog'
+  if (!path) return 'Writing'
   return path.charAt(0).toUpperCase() + path.slice(1)
 }
 ---
 
 <BaseLayout
-  title="Blog"
-  description="List of all the blog posts."
+  title="Writing"
+  description="List of all the writings."
   pageNav={true}
   pageOperate={true}
 >

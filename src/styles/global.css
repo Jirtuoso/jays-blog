@@ -1,3 +1,9 @@
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 html.dark .astro-code,
 html.dark .astro-code span {
   color: var(--shiki-dark) !important;
@@ -37,8 +43,7 @@ article {
 ::view-transition-old(root),
 ::view-transition-new(root) {
   mix-blend-mode: normal;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
+  animation: none;
 }
 
 ::view-transition-old(root) {
@@ -46,14 +51,7 @@ article {
 }
 
 ::view-transition-new(root) {
-  z-index: 2147483646;
-}
-
-html.dark::view-transition-old(root) {
-  z-index: 2147483646;
-}
-html.dark::view-transition-new(root) {
-  z-index: 1;
+  z-index: 9999;
 }
 
 .dark .bg-main {
@@ -61,13 +59,21 @@ html.dark::view-transition-new(root) {
   -un-bg-opacity: 1;
 }
 
-.light .bg-main {
-  background-color: #f0f8e8 !important;
+html:not(.dark) .bg-main {
+  background-color: #f5f0e8 !important;
   -un-bg-opacity: 1;
 }
 
-/* Nature-themed subtitle fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+/* Section headings - Phthalo Green */
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #123524;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.dark .section-heading {
+  color: #a8d5ba;
+}

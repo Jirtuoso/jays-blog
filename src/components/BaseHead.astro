@@ -40,7 +40,6 @@ function formatCanonicalURL(url: string | URL) {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
-<meta name="generator" content={Astro.generator} />
 
 <!-- Low Priority Global Metadata -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -78,6 +77,20 @@ function formatCanonicalURL(url: string | URL) {
     <meta name="twitter:image:alt" content={resolvedImage?.alt} />
   )
 }
+
+<script is:inline>
+  // Prevent flash of wrong theme by setting it before render
+  // VueUse's useDark stores preference in 'vueuse-color-scheme'
+  // Default to light mode if no preference is stored
+  ;(function () {
+    const stored = localStorage.getItem('vueuse-color-scheme')
+    if (stored === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  })()
+</script>
 
 <script>
   import nprogress from 'nprogress'

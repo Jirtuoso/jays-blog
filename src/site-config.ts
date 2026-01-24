@@ -1,6 +1,6 @@
 export const siteConfig = {
   author: 'Jay Hou',
-  title: "Intro to Jay",
+  title: 'Intro to Jay',
   subtitle: 'About me',
   description: 'Sharing some personal reflections with the world',
   image: {
@@ -15,7 +15,7 @@ export const siteConfig = {
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
-     {
+    {
       text: 'Linkedin',
       href: 'https://linkedin.com/in/jaycbhou',
       icon: 'i-simple-icons-linkedin',
@@ -28,12 +28,8 @@ export const siteConfig = {
     },
     navLinks: [
       {
-        text: 'Blog',
+        text: 'Writing',
         href: '/blog',
-      },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
       },
       {
         text: 'Projects',
@@ -44,12 +40,8 @@ export const siteConfig = {
   page: {
     blogLinks: [
       {
-        text: 'Blog',
+        text: 'Writing',
         href: '/blog',
-      },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
       },
       {
         text: 'Projects',

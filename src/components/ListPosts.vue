@@ -47,20 +47,20 @@ function getYear(date: Date | string | number) {
       </div>
     </template>
     <li v-for="(post, index) in list " :key="post.data.title" mb-8>
-      <div v-if="!isSameYear(post.data.date, list[index - 1]?.data.date)" class="mb-1 mt-4">
-        <h2 class="text-base italic opacity-50 font-light text-gray-500 dark:text-gray-400" style="font-family: 'Source Serif Pro', serif;">
+      <div v-if="!isSameYear(post.data.date, list[index - 1]?.data.date)" class="mb-3 mt-8">
+        <h2 class="section-heading">
           {{ getYear(post.data.date) }}
         </h2>
       </div>
       <a text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center text-wrap">
-            <span lh-normal>
+            <span lh-normal class="text-gray-800 dark:text-gray-100">
               <i v-if="post.data.draft" text-base vertical-mid i-ri-draft-line />
               {{ post.data.title }}
             </span>
           </div>
-          <div opacity-50 text-sm ws-nowrap flex="~ gap-2 items-center">
+          <div class="opacity-70 text-gray-600 dark:text-gray-300" text-sm ws-nowrap flex="~ gap-2 items-center">
             <i v-if="post.data.redirect" text-base i-ri-external-link-line />
             <i v-if="post.data.recording || post.data.video" text-base i-ri:film-line />
             <time v-if="post.data.date" :datetime="getDate(post.data.date)">{{ post.data.date.split(',')[0] }}</time>
@@ -69,7 +69,7 @@ function getYear(date: Date | string | number) {
             <span v-if="post.data.lang && post.data.lang.includes('zh')">· 中文</span>
           </div>
         </div>
-        <div opacity-50 text-sm>{{ post.data.description }}</div>
+        <div class="opacity-70 text-gray-600 dark:text-gray-300" text-sm>{{ post.data.description }}</div>
       </a>
     </li>
   </ul>
