@@ -89,8 +89,8 @@ function toggleTheme(event: MouseEvent) {
 }
 
 .theme-btn svg {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.35em;
+  height: 1.35em;
   display: inline-block;
 }
 </style>

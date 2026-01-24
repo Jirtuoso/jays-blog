@@ -11,7 +11,7 @@ export const siteConfig = {
   socialLinks: [
     {
       text: 'Twitter',
-      href: 'https://x.com/Koakanino',
+      href: 'https://x.com/jay_cbh',
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },

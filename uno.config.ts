@@ -65,5 +65,6 @@ export default defineConfig({
     'i-ri-sun-line',
     'dark:i-ri-moon-line',
     'i-ri-external-link-line',
+    'i-ri-rss-line',
   ],
 })

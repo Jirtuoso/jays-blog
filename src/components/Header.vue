@@ -1,26 +1,11 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core'
-import { computed, onMounted, ref, unref } from 'vue'
+import { onMounted, ref, unref } from 'vue'
 import ThemeToggle from './ThemeToggle.vue'
 import siteConfig from '@/site-config'
 import { getLinkTarget } from '@/utils/link'
 
 const navLinks = siteConfig.header.navLinks || []
-
-const socialLinks = computed(() => {
-  return siteConfig.socialLinks.filter((link: Record<string, any>) => {
-    if (link.header && typeof link.header === 'boolean') {
-      return link
-    }
-    else if (link.header && typeof link.header === 'string') {
-      link.icon = link.header.includes('i-') ? link.header : link.icon
-      return link
-    }
-    else {
-      return false
-    }
-  })
-})
 
 const { y: scroll } = useWindowScroll()
 
@@ -95,13 +80,31 @@ function toggleNavDrawer() {
         <menu i-ri-menu-2-fill />
       </div>
     </div>
-    <div class="flex gap-x-6">
+    <div class="flex gap-x-5 items-center">
+      <!-- X/Twitter Link -->
       <a
-        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
-        :target="getLinkTarget(link.href)" :href="link.href"
-      />
+        class="header-icon"
+        href="https://x.com/jay_cbh"
+        target="_blank"
+        aria-label="Twitter/X"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.35em" height="1.35em" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
+        </svg>
+      </a>
 
-      <a nav-link target="_blank" href="/rss.xml" i-ri-rss-line aria-label="RSS" />
+      <!-- RSS Feed Link -->
+      <a
+        class="header-icon"
+        href="/rss.xml"
+        target="_blank"
+        aria-label="RSS Feed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.35em" height="1.35em" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z" />
+        </svg>
+      </a>
+
       <ThemeToggle />
     </div>
   </header>
@@ -120,6 +123,19 @@ function toggleNavDrawer() {
 </template>
 
 <style scoped>
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  opacity: 1;
+}
+
 #header {
   transition: transform 0.4s ease;
 }
