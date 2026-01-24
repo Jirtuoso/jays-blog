@@ -5,16 +5,16 @@ description: Some tactics to avoid getting scammed
 date: 2025-01-04T14:46:00.000Z
 tag: 5 min
 ---
-My Mom's 2010 Santa Fe SUV has served me incredibly well since I got my license five years ago. It has taken me to countless trailheads, ski mountains, and grocery stores. And yet, when it started to break down this year, I was completely helpless in taking care of it. The most advanced thing I can do with a car is spray some windshield cleaner. 
+My Mom's 2010 Santa Fe SUV has served me incredibly well since I got my license five years ago. It has taken me to countless trailheads, ski mountains, and grocery stores. And yet, when it started to break down this year, I was completely helpless in taking care of it. The most advanced thing I can do with a car is spray some windshield cleaner.
 
-However, since then, I've negotiated with mechanics, tow trucks, and tire shops alike. I read negotiation books and happened to work a job cold-calling construction workers. These are the tips that have saved me thousands of dollars. 
+However, since then, I've negotiated with mechanics, tow trucks, and tire shops alike. I read negotiation books and happened to work a job cold-calling construction workers. These are the tips that have saved me thousands of dollars.
 
 1. Learn the Language
 
-   * Before you go into any negotiation, ask ChatGPT to brief you on the common slang of the field. For tow trucks, I'd say: "I don't need a flatbed, just a wheel lift." You want to seem like an insider. 
+   * Before you go into any negotiation, ask ChatGPT to brief you on the common slang of the field. For tow trucks, I'd say: "I don't need a flatbed, just a wheel lift." You want to seem like an insider.
 2. Start Ringing Some Mechanics
 
-   * If your car starts making noises, pay a mechanic $50 to diagnose it and then call five different shops to ask for a preliminary quote range. 
+   * If your car starts making noises, pay a mechanic $50 to diagnose it and then call five different shops to ask for a preliminary quote range.
    * You can find the mechanics on Google Maps
    * They may not give you a hard number unless it's a very clear job, but you will find that some mechanics have huge differences in the price
    * Be short, casual, and succinct in your calls.
@@ -22,8 +22,8 @@ However, since then, I've negotiated with mechanics, tow trucks, and tire shops 
    * All mechanics know their competitors by name. Don't be afraid to drop it when negotiating between shops. "Dave from XYZ Autoshop down Smith St. quoted me $350, any chance you can beat that?"
 3. Negotiating On-Site
 
-   * The real negotiation starts when you bring the car to the shop. Mechanics often try to raise the price once you show up with a BS excuse, such as "Oh, it looks worse than I thought." You need to be willing to walk away and call their bluff. 
-   * Show up with exact cash, with a couple of extra hundred stashed in a separate wallet. 
+   * The real negotiation starts when you bring the car to the shop. Mechanics often try to raise the price once you show up with a BS excuse, such as "Oh, it looks worse than I thought." You need to be willing to walk away and call their bluff.
+   * Show up with exact cash, with a couple of extra hundred stashed in a separate wallet.
    * Be mindful of appearances; don't dress like you're expensive.
    * Always make small talk.
    * Don't look like you're in a rush.

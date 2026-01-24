@@ -1,28 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
+import { getEntry } from 'astro:content'
+
+const home = await getEntry('pages', 'home')
+const { Content } = await home.render()
 ---
 
 <BaseLayout description={siteConfig.description}>
   <article class="prose">
-    <h1 class="text-title">Hi I'm Jay</h1>
-    <p>Based in NYC, hailing from the lush Pacific Northwest.</p>
-    <p>
-     I like to brainstorm scrappy growth ideas, chat up clients, and build beautiful slides. My burning passions are podcasting and nerding out about mountains. I'm fairly nomadic as well.</p>
- <p>Currently 📖: <em> Bowling Alone, Robert Putnam </em></p>
-      <p>You may find these intriguing:</p>
-  { <ul>
-        <li>
-        <a target="_blank" href="https://jaycbh.com/posts/post-6/">Century-old perspectives on a life well lived</a>
-      </li>
-      <li>
-        <a target="_blank" href="https://jaycbh.com/posts/post-3/">Thriving in a new city alone; a list</a>
-      </li>
-    </ul>
-<p> If I've met you before, feel free to check out my f&f newsletter 
-        <a target="_blank" href="https://jaycbh.beehiiv.com/">here.</a>
-      </p>
-}
+    <h1 class="text-title">{home.data.title}</h1>
+    <Content />
     <hr class="hr-line" />
     <p>Find me on</p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
@@ -48,8 +36,7 @@ import siteConfig from '@/site-config'
         href={`mailto:${siteConfig.email}`}
       >
         {siteConfig.email}
-      </a>-
-I would love to hear your lore. Suggest me new places to move to.
+      </a>- I would love to hear your lore. Suggest me new places to move to.
     </p>
   </article>
 </BaseLayout>

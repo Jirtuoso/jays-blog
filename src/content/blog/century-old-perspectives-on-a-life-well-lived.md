@@ -23,7 +23,7 @@ Compare this with the YFT’s self-help guides where the words “character” a
 
 > “I wish now to emphasize the fact that no habit is so valuable, no love of anything in the world so precious, as the love of labor, of constantly and regularly producing something useful… it is the purifier of character.”
 
-Hard work is acknowledged, even glorified. It is not glossed over or underrepresented. While modern self-help perpetually dangles the carrot of financial independence in every video, the YFT emphasizes the process far more than the result. They even go so far as to say: 
+Hard work is acknowledged, even glorified. It is not glossed over or underrepresented. While modern self-help perpetually dangles the carrot of financial independence in every video, the YFT emphasizes the process far more than the result. They even go so far as to say:
 
 > “Poverty is the finest inheritance a young man can have. No combination can be better than poverty and good health to a young man who wants to carve his way in the world.”
 
@@ -41,7 +41,7 @@ What has not changed are the excuses. Whichever one you may choose, I can assure
 
 Lastly, one may critique that the YFT’s self-help articles were far more inspirational than they were practical. That is undoubtedly true, and they should not be read literally. Yet there’s something very noble about them that scratches my moral itch inside, representing a step backward in the right direction. It has created in me a repulsion to the money-frantic, shortcut-oriented self-help content that is ubiquitous on the internet today.
 
-My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks. The ingredients for success haven’t changed. 
+My wish is for us to stop over-indexing on novelty and read content that was incentivized for learning rather than for advertisement clicks. The ingredients for success haven’t changed.
 
 #### **Role Models: Past & Present**
 
