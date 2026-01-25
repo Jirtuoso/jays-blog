@@ -1,17 +1,11 @@
 <script lang="ts" setup>
 import { useDark, useToggle } from '@vueuse/core'
-import { onMounted } from 'vue'
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-
-onMounted(() => {
-  const stored = localStorage.getItem('vueuse-color-scheme')
-  if (!stored) {
-    // Default to light mode on first visit
-    isDark.value = false
-  }
+const isDark = useDark({
+  // Don't use system preference, always default to light
+  initialValue: 'light',
 })
+const toggleDark = useToggle(isDark)
 
 function toggleTheme(event: MouseEvent) {
   const x = event.clientX

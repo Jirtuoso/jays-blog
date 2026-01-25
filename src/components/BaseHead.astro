@@ -81,13 +81,19 @@ function formatCanonicalURL(url: string | URL) {
 <script is:inline>
   // Prevent flash of wrong theme by setting it before render
   // VueUse's useDark stores preference in 'vueuse-color-scheme'
-  // Default to light mode if no preference is stored
+  // Default to light mode - ignore system preference
   ;(function () {
     const stored = localStorage.getItem('vueuse-color-scheme')
+    // Only show dark mode if explicitly set to 'dark'
+    // New visitors and those without preference get light mode
     if (stored === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
+      // Ensure light mode is set for new visitors
+      if (!stored) {
+        localStorage.setItem('vueuse-color-scheme', 'light')
+      }
     }
   })()
 </script>
