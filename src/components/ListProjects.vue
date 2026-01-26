@@ -57,7 +57,7 @@ function isSameCategory(a: string | undefined, b: string | undefined) {
           </div>
           <div class="opacity-70 text-gray-600 dark:text-gray-300" text-sm ws-nowrap flex="~ gap-2 items-center">
             <i v-if="project.data.redirect" text-base i-ri-external-link-line />
-            <time v-if="project.data.date" :datetime="getDate(project.data.date)">{{ project.data.date.split(',')[0] }}</time>
+            <time v-if="project.data.date" :datetime="getDate(project.data.date)">{{ project.data.date }}</time>
           </div>
         </div>
         <div class="opacity-70 text-gray-600 dark:text-gray-300" text-sm>{{ project.data.description }}</div>
