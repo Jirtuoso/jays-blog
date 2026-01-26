@@ -1,5 +1,5 @@
 ---
-slug: post7
+slug: post-7
 title: Excerpt from the F&F Newsletter
 description: If you were curious about my December 2025
 date: 2025-12-22T16:36:00.000-08:00
