@@ -1,6 +1,7 @@
 ---
 title: Hi I'm Jay,
-description: Personal homepage
+description: "Jay Hou’s personal website and writing on life, work, books, and startups, from San Francisco."
+spacing: standard
 ---
 📍 San Francisco
 

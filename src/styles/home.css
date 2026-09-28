@@ -1,0 +1,9 @@
+.prose .home-body--compact > :is(p, ul, ol, blockquote) {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.prose .home-body--spacious > :is(p, ul, ol, blockquote) {
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+}

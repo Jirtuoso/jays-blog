@@ -15,8 +15,25 @@ collections:
         label: Home Page
         file: src/content/pages/home.md
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Page heading, name: title, widget: string}
+          - label: Homepage text and links
+            name: body
+            widget: richtext
+            modes: [rich_text, raw]
+            hint: Use the Link button for hyperlinks. Paragraphs and lists create the page rhythm; use the preview pane to see the layout before publishing.
+          - label: Paragraph spacing
+            name: spacing
+            widget: select
+            default: standard
+            options:
+              - {label: Compact, value: compact}
+              - {label: Standard (current layout), value: standard}
+              - {label: Spacious, value: spacious}
+            hint: Changes the vertical space between paragraphs and lists on the homepage.
+          - label: Search and sharing description
+            name: description
+            widget: text
+            hint: A short homepage summary used in page metadata and link previews.
 
   - name: Writing
     label: Writing

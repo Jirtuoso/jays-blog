@@ -4,6 +4,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    spacing: z.enum(['compact', 'standard', 'spacious']).default('standard'),
     image: z
       .object({
         src: z.string(),
