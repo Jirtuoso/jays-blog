@@ -21,6 +21,7 @@ const { post } = Astro.props
 const { title, image, description, date, duration, tag } = post.data
 
 const { Content } = await post.render()
+const siteURL = Astro.site?.toString() ?? Astro.url.origin
 
 function getDate(date: string) {
   return new Date(date).toISOString()
@@ -34,9 +35,9 @@ const articleData = {
   datePublished: date ? getDate(date) : undefined,
   author: {
     '@type': 'Person',
-    '@id': 'https://jaycbh.com/#person',
+    '@id': `${siteURL}#person`,
     name: 'Jay Hou',
-    url: 'https://jaycbh.com/',
+    url: siteURL,
   },
   image: image ? new URL(image.src, Astro.site).toString() : undefined,
 }

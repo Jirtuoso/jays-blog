@@ -5,24 +5,25 @@ import { getEntry } from 'astro:content'
 
 const home = await getEntry('pages', 'home')
 const { Content } = await home.render()
+const siteURL = Astro.site?.toString() ?? Astro.url.origin
 const homepageData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': 'https://jaycbh.com/#website',
-      url: 'https://jaycbh.com/',
+      '@id': `${siteURL}#website`,
+      url: siteURL,
       name: 'Jay Hou',
     },
     {
       '@type': 'ProfilePage',
-      '@id': 'https://jaycbh.com/#profile',
-      url: 'https://jaycbh.com/',
+      '@id': `${siteURL}#profile`,
+      url: siteURL,
       mainEntity: {
         '@type': 'Person',
-        '@id': 'https://jaycbh.com/#person',
+        '@id': `${siteURL}#person`,
         name: 'Jay Hou',
-        url: 'https://jaycbh.com/',
+        url: siteURL,
         description:
           'Writer in San Francisco interested in life, work, books, and startups.',
         sameAs: siteConfig.socialLinks.map((link) => link.href),

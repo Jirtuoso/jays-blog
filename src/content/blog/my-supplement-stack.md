@@ -1,7 +1,7 @@
 ---
 slug: post49
 title: My Supplement Stack
-description: ^^
+description: Jay Hou shares the supplements in his personal routine, including omega-3, lutein, creatine, magnesium, zinc, vitamin B6, and psyllium husk.
 date: 2026-02-16T13:59:00.000-08:00
 tag: "1:59"
 ---
