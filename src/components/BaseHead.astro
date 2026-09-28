@@ -9,12 +9,14 @@ interface Props {
   description?: string
   image?: { src: string; alt?: string }
   pageType?: 'website' | 'article'
+  noindex?: boolean
 }
 
 const {
   description = siteConfig.description,
   image = siteConfig.image,
   pageType = 'website',
+  noindex = false,
 } = Astro.props
 
 const title = Astro.props.title
@@ -38,13 +40,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
 <meta name="author" content={siteConfig.author} />
 
 <!-- Low Priority Global Metadata -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/toad-icon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
 
 <!-- Page Metadata -->
 <link rel="canonical" href={canonicalURL} />
 <meta name="description" content={description} />
+{noindex && <meta name="robots" content="noindex" />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={pageType} />
@@ -76,23 +79,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
 }
 
 <script is:inline>
-  // Prevent flash of wrong theme by setting it before render
-  // VueUse's useDark stores preference in 'vueuse-color-scheme'
-  // Default to light mode - ignore system preference
-  ;(function () {
-    const stored = localStorage.getItem('vueuse-color-scheme')
-    // Only show dark mode if explicitly set to 'dark'
-    // New visitors and those without preference get light mode
-    if (stored === 'dark') {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      // Ensure light mode is set for new visitors
-      if (!stored) {
-        localStorage.setItem('vueuse-color-scheme', 'light')
-      }
-    }
-  })()
+  // Apply the default before paint to avoid a light-background flash.
+  document.documentElement.classList.add('dark')
 </script>
 
 <script>

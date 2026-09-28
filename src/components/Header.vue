@@ -66,7 +66,7 @@ function toggleNavDrawer() {
   >
     <div class="flex items-center h-full">
       <a href="/" mr-6 aria-label="Header Logo Image">
-        <img width="32" height="32" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+        <img class="site-logo" width="40" height="40" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
       </a>
       <nav class="sm:flex hidden flex-wrap gap-x-6 position-initial flex-row">
         <a
@@ -81,6 +81,16 @@ function toggleNavDrawer() {
       </div>
     </div>
     <div class="flex gap-x-5 items-center">
+      <a
+        class="header-icon"
+        href="https://www.linkedin.com/in/jaycbhou/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Jay Hou on LinkedIn"
+      >
+        <span class="i-simple-icons-linkedin text-[1.35em]" aria-hidden="true" />
+      </a>
+
       <!-- X/Twitter Link -->
       <a
         class="header-icon"
@@ -90,18 +100,6 @@ function toggleNavDrawer() {
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="1.35em" height="1.35em" viewBox="0 0 24 24">
           <path fill="currentColor" d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
-        </svg>
-      </a>
-
-      <!-- RSS Feed Link -->
-      <a
-        class="header-icon"
-        href="/rss.xml"
-        target="_blank"
-        aria-label="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.35em" height="1.35em" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z" />
         </svg>
       </a>
 

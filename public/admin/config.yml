@@ -42,3 +42,17 @@ collections:
       - {label: Category, name: category, widget: string, hint: 'e.g. GTM, Content, Engineering'}
       - {label: Date, name: date, widget: datetime}
       - {label: Link (optional), name: redirect, widget: string, required: false}
+
+  - name: qa
+    label: Q&A
+    label_singular: Question
+    folder: src/content/qa
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}} — {{topic}}'
+    fields:
+      - {label: Question, name: title, widget: string}
+      - {label: Topic, name: topic, widget: string, default: General}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Draft, name: draft, widget: boolean, default: true}
+      - {label: Answer, name: body, widget: markdown}

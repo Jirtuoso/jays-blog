@@ -2,8 +2,9 @@
 import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark({
-  // Don't use system preference, always default to light
-  initialValue: 'light',
+  // Start each page load in dark mode; allow toggling while browsing.
+  initialValue: 'dark',
+  storageKey: null,
 })
 const toggleDark = useToggle(isDark)
 

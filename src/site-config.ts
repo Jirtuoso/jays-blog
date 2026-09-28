@@ -4,8 +4,8 @@ export const siteConfig = {
   subtitle: 'About me',
   description: 'Jay Hou’s personal website and writing on life, work, books, and startups, from San Francisco.',
   image: {
-    src: '/hero.jpg',
-    alt: 'Website Main Image',
+    src: '/toad-logo.png',
+    alt: 'Green toad holding a coffee cup, Jay Hou’s site logo',
   },
   email: 'jayhaswords@gmail.com',
   socialLinks: [
@@ -16,15 +16,15 @@ export const siteConfig = {
       header: 'i-ri-twitter-x-line',
     },
     {
-      text: 'Linkedin',
+      text: 'LinkedIn',
       href: 'https://www.linkedin.com/in/jaycbhou/',
       icon: 'i-simple-icons-linkedin',
     },
   ],
   header: {
     logo: {
-      src: '/favicon.svg',
-      alt: 'Logo Image',
+      src: '/toad-icon.png',
+      alt: 'Jay Hou — toad holding a coffee cup',
     },
     navLinks: [
       {
@@ -32,8 +32,8 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Projects',
-        href: '/projects',
+        text: 'Q&A',
+        href: '/qa',
       },
     ],
   },

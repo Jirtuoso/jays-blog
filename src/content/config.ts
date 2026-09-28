@@ -55,4 +55,13 @@ const projects = defineCollection({
   }),
 })
 
-export const collections = { pages, blog, projects }
+const qa = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    topic: z.string().default('General'),
+    date: z.coerce.date(),
+    draft: z.boolean().default(false),
+  }),
+})
+
+export const collections = { pages, blog, projects, qa }

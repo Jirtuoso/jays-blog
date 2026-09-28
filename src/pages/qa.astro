@@ -1,0 +1,334 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+import siteConfig from '@/site-config'
+
+const entries = (
+  await getCollection('qa', ({ data }) => !data.draft || import.meta.env.DEV)
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+const questions = await Promise.all(
+  entries.map(async (entry) => ({ entry, ...(await entry.render()) })),
+)
+const topics = [...new Set(entries.map((entry) => entry.data.topic))].sort()
+---
+
+<BaseLayout
+  title="Q&A"
+  description="Questions, answers, and conversations with Jay Hou."
+  noindex={entries.length === 0}
+>
+  <section class="qa">
+    <header class="qa-intro">
+      <p class="eyebrow">ASK JAY</p>
+      <h1 class="text-title">Questions & answers</h1>
+      <p>A place for curiosity and conversation.</p>
+      <a
+        class="ask"
+        href={`mailto:${siteConfig.email}?subject=Question%20for%20Jay`}
+        >Ask a question <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    {
+      entries.length === 0 && (
+        <p>Questions are welcome. Send me one to get this started.</p>
+      )
+    }
+    <div class="controls" hidden={entries.length === 0}>
+      <label
+        >Search questions<input
+          id="qa-search"
+          type="search"
+          placeholder="What are you curious about?"
+        /></label
+      >
+      <label
+        >Topic<select id="qa-topic"
+          ><option value="">All topics</option>{
+            topics.map((topic) => <option value={topic}>{topic}</option>)
+          }</select
+        ></label
+      >
+    </div>
+    <p
+      id="qa-count"
+      class="count"
+      aria-live="polite"
+      hidden={entries.length === 0}
+    >
+      {questions.length}
+      {questions.length === 1 ? 'answer' : 'answers'}
+    </p>
+    <div class="feed">
+      {
+        questions.map(({ entry, Content }) => (
+          <details
+            class="question"
+            id={entry.slug}
+            data-topic={entry.data.topic}
+            data-search={`${entry.data.title} ${entry.data.topic} ${entry.body}`.toLowerCase()}
+            open
+          >
+            <summary>
+              <>
+                <span class="eyebrow">{entry.data.topic}</span>
+                <h2>{entry.data.title}</h2>
+                <span class="expand" aria-hidden="true" />
+              </>
+            </summary>
+            <div class="answer">
+              <div class="byline">
+                <>
+                  <span class="avatar" aria-hidden="true">
+                    J
+                  </span>
+                  <span>
+                    <>
+                      <strong>Jay Hou</strong>
+                      <time datetime={entry.data.date.toISOString()}>
+                        {entry.data.date.toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                          timeZone: 'UTC',
+                        })}
+                      </time>
+                    </>
+                  </span>
+                </>
+              </div>
+              <div class="prose">
+                <Content />
+              </div>
+              <a class="permalink" href={`#${entry.slug}`}>
+                Link to answer ↗
+              </a>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+    <p id="qa-empty" hidden>
+      No answers match. Try a different search or topic.
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  function setupQA() {
+    const search = document.querySelector<HTMLInputElement>('#qa-search')
+    const topic = document.querySelector<HTMLSelectElement>('#qa-topic')
+    if (!search || !topic) return
+    const rows = [...document.querySelectorAll<HTMLDetailsElement>('.question')]
+    for (const row of rows) {
+      const summary = row.querySelector('summary')!
+      const answer = row.querySelector<HTMLElement>('.answer')!
+      let collapsing = false
+      summary.addEventListener('click', (event) => {
+        if (collapsing) {
+          event.preventDefault()
+          return
+        }
+        if (
+          !row.open ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        )
+          return
+        event.preventDefault()
+        collapsing = true
+        answer.style.overflow = 'hidden'
+        const animation = answer.animate(
+          [
+            {
+              height: `${answer.offsetHeight}px`,
+              opacity: 1,
+              paddingTop: getComputedStyle(answer).paddingTop,
+            },
+            { height: '0px', opacity: 0, paddingTop: '0px' },
+          ],
+          { duration: 200, easing: 'ease-in-out' },
+        )
+        animation.onfinish = () => {
+          row.open = false
+          answer.style.overflow = ''
+          collapsing = false
+        }
+      })
+    }
+    function filter() {
+      let count = 0
+      for (const row of rows) {
+        row.hidden = !(
+          row.dataset.search?.includes(search!.value.trim().toLowerCase()) &&
+          (!topic!.value || row.dataset.topic === topic!.value)
+        )
+        if (!row.hidden) count++
+      }
+      document.querySelector('#qa-count')!.textContent =
+        `${count} ${count === 1 ? 'answer' : 'answers'}`
+      document.querySelector<HTMLElement>('#qa-empty')!.hidden = count > 0
+    }
+    search.addEventListener('input', filter)
+    topic.addEventListener('change', filter)
+  }
+  document.addEventListener('astro:page-load', setupQA)
+</script>
+
+<style>
+  .qa-intro {
+    padding-bottom: 2rem;
+  }
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+  h1 {
+    margin: 0.7rem 0 1rem;
+  }
+  .qa-intro > p:not(.eyebrow) {
+    opacity: 0.7;
+  }
+  .ask {
+    display: inline-flex;
+    gap: 2rem;
+    margin-top: 1.4rem;
+    border: 1px solid currentColor;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  .ask:hover {
+    transform: translateY(-2px);
+  }
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #8884;
+  }
+  .controls[hidden] {
+    display: none;
+  }
+  label {
+    font-size: 0.75rem;
+  }
+  input,
+  select {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #8886;
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.9rem;
+  }
+  select option {
+    color: #123524;
+    background: #f5f0e8;
+  }
+  .count {
+    margin: 1.5rem 0 0.5rem;
+    opacity: 0.6;
+    font-size: 0.8rem;
+  }
+  .question {
+    border-bottom: 1px solid #8884;
+    padding: 1.5rem 0;
+    scroll-margin-top: 6rem;
+  }
+  .question[hidden] {
+    display: none;
+  }
+  summary {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    padding-right: 2rem;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  .expand {
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .expand::before {
+    content: '+';
+  }
+  details[open] .expand::before {
+    content: '−';
+  }
+  .answer {
+    padding-top: 1.3rem;
+    animation: reveal 0.2s ease-out;
+  }
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.8rem;
+  }
+  .avatar {
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 1px solid #8886;
+    font-family: Georgia, serif;
+  }
+  time {
+    display: block;
+    opacity: 0.6;
+    font-size: 0.7rem;
+    margin-top: 0.15rem;
+  }
+  .permalink {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    opacity: 0.65;
+  }
+  .permalink:hover {
+    opacity: 1;
+  }
+  #qa-empty {
+    padding: 2rem 0;
+    opacity: 0.7;
+  }
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 480px) {
+    .controls {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    .answer {
+      animation: none;
+      transition: none;
+    }
+  }
+</style>
