@@ -79,8 +79,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
 }
 
 <script is:inline>
-  // Apply the default before paint to avoid a light-background flash.
-  document.documentElement.classList.add('dark')
+  // New visits start dark; retain a light-mode choice while this tab is open.
+  const preferredTheme = sessionStorage.getItem('jay-site-theme')
+  document.documentElement.classList.toggle('dark', preferredTheme !== 'light')
 </script>
 
 <script>

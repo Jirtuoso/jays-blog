@@ -2,9 +2,10 @@
 import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark({
-  // Start each page load in dark mode; allow toggling while browsing.
+  // Start new tabs in dark mode, but keep a visitor's choice across navigation.
   initialValue: 'dark',
-  storageKey: null,
+  storageKey: 'jay-site-theme',
+  storage: typeof window === 'undefined' ? undefined : window.sessionStorage,
 })
 const toggleDark = useToggle(isDark)
 
