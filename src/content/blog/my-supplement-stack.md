@@ -3,7 +3,7 @@ slug: post49
 title: My Supplement Stack
 description: ^^
 date: 2026-02-16T13:59:00.000-08:00
-tag: 1:59
+tag: "1:59"
 ---
 I'm a huge believer of supplements. Even if they don't work, believing in them benefits you (placebos work).\
 \

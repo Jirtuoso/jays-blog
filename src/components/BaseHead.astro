@@ -12,12 +12,14 @@ interface Props {
 }
 
 const {
-  description = '',
+  description = siteConfig.description,
   image = siteConfig.image,
   pageType = 'website',
 } = Astro.props
 
-const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ')
+const title = Astro.props.title
+  ? `${Astro.props.title} | ${siteConfig.title}`
+  : `${siteConfig.title} | Personal Website & Writing`
 
 const resolvedImage = image?.src
   ? {
@@ -26,20 +28,14 @@ const resolvedImage = image?.src
     }
   : undefined
 
-const canonicalURL = new URL(Astro.request.url, Astro.site)
-
-function formatCanonicalURL(url: string | URL) {
-  const path = url.toString()
-  const hasQueryParams = path.includes('?')
-  if (hasQueryParams) path.replace(/\/?$/, '')
-  return path.replace(/\/?$/, hasQueryParams ? '' : '/')
-}
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
 ---
 
 <!-- High Priority Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
+<meta name="author" content={siteConfig.author} />
 
 <!-- Low Priority Global Metadata -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -47,12 +43,13 @@ function formatCanonicalURL(url: string | URL) {
 <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
 
 <!-- Page Metadata -->
-<link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
+<link rel="canonical" href={canonicalURL} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={pageType} />
-<meta property="og:url" content={formatCanonicalURL(canonicalURL)} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteConfig.title} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 {resolvedImage?.src && <meta property="og:image" content={resolvedImage.src} />}
@@ -64,7 +61,7 @@ function formatCanonicalURL(url: string | URL) {
 
 <!-- X / Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={formatCanonicalURL(canonicalURL)} />
+<meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 {

@@ -25,9 +25,25 @@ const { Content } = await post.render()
 function getDate(date: string) {
   return new Date(date).toISOString()
 }
+const articleData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  url: new URL(`/posts/${post.slug}/`, Astro.site).toString(),
+  datePublished: date ? getDate(date) : undefined,
+  author: {
+    '@type': 'Person',
+    '@id': 'https://jaycbh.com/#person',
+    name: 'Jay Hou',
+    url: 'https://jaycbh.com/',
+  },
+  image: image ? new URL(image.src, Astro.site).toString() : undefined,
+}
 ---
 
 <BaseLayout title={title} description={description} pageType="article">
+  <script type="application/ld+json" set:html={JSON.stringify(articleData)} />
   <article class="prose">
     <h1>{title}</h1>
     <p op-50>

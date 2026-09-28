@@ -2,7 +2,7 @@ export const siteConfig = {
   author: 'Jay Hou',
   title: 'Jay Hou',
   subtitle: 'About me',
-  description: 'Sharing some personal reflections with the world',
+  description: 'Jay Hou’s personal website and writing on life, work, books, and startups, from San Francisco.',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
@@ -17,7 +17,7 @@ export const siteConfig = {
     },
     {
       text: 'Linkedin',
-      href: 'https://linkedin.com/in/jaycbhou',
+      href: 'https://www.linkedin.com/in/jaycbhou/',
       icon: 'i-simple-icons-linkedin',
     },
   ],

@@ -5,9 +5,35 @@ import { getEntry } from 'astro:content'
 
 const home = await getEntry('pages', 'home')
 const { Content } = await home.render()
+const homepageData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://jaycbh.com/#website',
+      url: 'https://jaycbh.com/',
+      name: 'Jay Hou',
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': 'https://jaycbh.com/#profile',
+      url: 'https://jaycbh.com/',
+      mainEntity: {
+        '@type': 'Person',
+        '@id': 'https://jaycbh.com/#person',
+        name: 'Jay Hou',
+        url: 'https://jaycbh.com/',
+        description:
+          'Writer in San Francisco interested in life, work, books, and startups.',
+        sameAs: siteConfig.socialLinks.map((link) => link.href),
+      },
+    },
+  ],
+}
 ---
 
 <BaseLayout description={siteConfig.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(homepageData)} />
   <article class="prose">
     <h1 class="text-title">{home.data.title}</h1>
     <Content />
