@@ -1,13 +1,20 @@
 <script lang="ts" setup>
-import { useDark, useToggle } from '@vueuse/core'
+import { onMounted, ref } from 'vue'
 
-const isDark = useDark({
-  // Start new tabs in dark mode, but keep a visitor's choice across navigation.
-  initialValue: 'dark',
-  storageKey: 'jay-site-theme',
-  storage: typeof window === 'undefined' ? undefined : window.sessionStorage,
+const isDark = ref(true)
+
+onMounted(() => {
+  const dark = window.sessionStorage.getItem('jay-site-theme') !== 'light'
+  document.documentElement.classList.toggle('dark', dark)
+  isDark.value = dark
 })
-const toggleDark = useToggle(isDark)
+
+function toggleDark() {
+  const next = !isDark.value
+  window.sessionStorage.setItem('jay-site-theme', next ? 'dark' : 'light')
+  document.documentElement.classList.toggle('dark', next)
+  isDark.value = next
+}
 
 function toggleTheme(event: MouseEvent) {
   const x = event.clientX
