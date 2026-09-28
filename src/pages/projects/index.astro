@@ -14,7 +14,11 @@ const projects = (await getCollection('projects')).sort((a, b) => {
 })
 ---
 
-<BaseLayout title="Projects" description="List of projects that I am proud of">
+<BaseLayout
+  title="Projects"
+  description="List of projects that I am proud of"
+  noindex
+>
   <h1 class="mb-10 text-title">Projects</h1>
   <ListProjects list={projects} />
 </BaseLayout>

@@ -14,7 +14,7 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
-    sitemap({ filter: page => !page.endsWith('/qa/') }),
+    sitemap({ filter: page => !page.endsWith('/qa/') && !page.endsWith('/projects/') }),
     UnoCSS({
       injectReset: true,
     }),
