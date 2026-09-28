@@ -1,30 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ListPosts from '@/components/ListPosts.vue'
-import siteConfig from '@/site-config'
 import { getPosts } from '@/utils/posts'
 
 export async function getStaticPaths() {
-  const paths = siteConfig.page.blogLinks.map((nav) => {
-    const href = nav.href.replace('/blog', '')
-    return {
-      params: {
-        path: href === '' ? undefined : href.replace(/^\/+|\/+$/g, ''),
-      },
-    }
-  })
-  return paths
+  return [{ params: { path: undefined } }]
 }
 
-const { path } = Astro.params
-
-const posts = await getPosts(path)
-
-// Get the page title based on the path
-function getPageTitle() {
-  if (!path) return 'Writing'
-  return path.charAt(0).toUpperCase() + path.slice(1)
-}
+const posts = await getPosts()
 ---
 
 <BaseLayout
@@ -33,6 +16,6 @@ function getPageTitle() {
   pageNav={true}
   pageOperate={true}
 >
-  <h1 class="mb-10 text-title">{getPageTitle()}</h1>
+  <h1 class="mb-10 text-title">Writing</h1>
   <ListPosts list={posts} />
 </BaseLayout>
