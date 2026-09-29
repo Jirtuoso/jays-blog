@@ -7,7 +7,7 @@ import Footer from '@/components/Footer.vue'
 import ScrollToTop from '@/components/ScrollToTop.vue'
 import UmamiAnalytics from '@/components/UmamiAnalytics.astro' // Add this line
 
-const { ...head } = Astro.props
+const { wide = false, ...head } = Astro.props
 ---
 
 <!doctype html>
@@ -19,7 +19,10 @@ const { ...head } = Astro.props
   <body class="bg-main text-main min-h-screen font-sans w-full bg-dot">
     <Header client:load />
     <main
-      class="grow max-w-3xl mx-auto sm:pt-36 pt-26 pb-6 px-6 relative"
+      class:list={[
+        'grow mx-auto sm:pt-36 pt-26 pb-6 px-6 relative',
+        wide ? 'max-w-6xl' : 'max-w-3xl',
+      ]}
       transition:animate={fade({ duration: '0.4s' })}
     >
       <slot />

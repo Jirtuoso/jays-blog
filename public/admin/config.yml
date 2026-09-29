@@ -48,6 +48,34 @@ collections:
       - {label: Time, name: tag, widget: string}
       - {label: Body, name: body, widget: markdown}
 
+  - name: gallery
+    label: Gallery
+    files:
+      - name: gallery
+        label: Gallery photos
+        file: src/data/gallery.json
+        format: json
+        fields:
+          - {label: Page heading, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - label: Photos
+            name: photos
+            widget: list
+            min: 1
+            summary: '{{fields.caption}}'
+            fields:
+              - label: Photo
+                name: src
+                widget: image
+                choose_url: false
+                media_folder: /public/gallery
+                public_folder: /gallery
+              - {label: Description for accessibility, name: alt, widget: string}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Original VSCO link, name: source, widget: string, required: false}
+              - {label: Image width in pixels, name: width, widget: number, required: false}
+              - {label: Image height in pixels, name: height, widget: number, required: false}
+
   - name: Projects
     label: Projects
     folder: src/content/projects

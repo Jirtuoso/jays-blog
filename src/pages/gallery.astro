@@ -1,0 +1,220 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import gallery from '@/data/gallery.json'
+
+const [featured, ...photos] = gallery.photos
+---
+
+<BaseLayout
+  title="Gallery"
+  description="A photo gallery by Jay Hou: landscapes, city views, and moments from his travels."
+  image={{ src: featured.src, alt: featured.alt }}
+  wide
+>
+  <section class="gallery-page">
+    <header class="gallery-intro">
+      <p class="gallery-eyebrow">PHOTOGRAPHS BY JAY HOU</p>
+      <h1>{gallery.title}</h1>
+      <p>{gallery.intro}</p>
+    </header>
+
+    <figure class="gallery-feature">
+      <a
+        href={featured.source || featured.src}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`View ${featured.caption}${featured.source ? ' on VSCO' : ''}`}
+      >
+        <img
+          src={featured.src}
+          alt={featured.alt}
+          width={featured.width}
+          height={featured.height}
+          fetchpriority="high"
+        />
+      </a>
+      <figcaption>{featured.caption}</figcaption>
+    </figure>
+
+    <div class="gallery-grid">
+      {
+        photos.map((photo) => (
+          <figure class="gallery-item">
+            <a
+              href={photo.source || photo.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${photo.caption}${photo.source ? ' on VSCO' : ''}`}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <figcaption>{photo.caption}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+
+    <p class="gallery-more">
+      <a
+        href="https://vsco.co/jirtuoso/gallery"
+        target="_blank"
+        rel="noopener noreferrer"
+        >More on VSCO <span aria-hidden="true">↗</span></a
+      >
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .gallery-page {
+    --gallery-ink: #153727;
+    --gallery-muted: #58645d;
+    --gallery-line: rgba(21, 55, 39, 0.2);
+    max-width: 100%;
+    padding-bottom: 4rem;
+  }
+
+  :global(.dark) .gallery-page {
+    --gallery-ink: #eef4eb;
+    --gallery-muted: #b5c7ba;
+    --gallery-line: rgba(238, 244, 235, 0.25);
+  }
+
+  .gallery-intro {
+    padding: 0 0 2.75rem;
+  }
+
+  .gallery-eyebrow {
+    color: var(--gallery-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin: 0 0 1rem;
+  }
+
+  .gallery-intro h1 {
+    color: var(--gallery-ink);
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    font-weight: 750;
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+    margin: 0 0 1.25rem;
+  }
+
+  .gallery-intro > p:last-child {
+    color: var(--gallery-muted);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    margin: 0;
+  }
+
+  .gallery-feature,
+  .gallery-item {
+    margin: 0;
+  }
+
+  .gallery-feature a,
+  .gallery-item a {
+    display: block;
+    overflow: hidden;
+    background: var(--gallery-line);
+  }
+
+  .gallery-feature img,
+  .gallery-item img {
+    display: block;
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+    transition:
+      transform 450ms ease,
+      filter 450ms ease;
+  }
+
+  .gallery-feature a:hover img,
+  .gallery-item a:hover img {
+    transform: scale(1.025);
+    filter: saturate(1.08);
+  }
+
+  .gallery-feature img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center 48%;
+  }
+
+  .gallery-feature figcaption,
+  .gallery-item figcaption {
+    color: var(--gallery-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin-top: 0.6rem;
+  }
+
+  .gallery-feature {
+    margin-bottom: 3rem;
+  }
+
+  .gallery-grid {
+    columns: 3 16rem;
+    column-gap: 1.25rem;
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-more {
+    border-top: 1px solid var(--gallery-line);
+    color: var(--gallery-ink);
+    margin: 1.25rem 0 0;
+    padding-top: 1.25rem;
+    text-align: right;
+  }
+
+  .gallery-more a {
+    text-underline-offset: 0.3em;
+  }
+
+  .gallery-more a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .gallery-intro {
+      padding-bottom: 1.75rem;
+    }
+
+    .gallery-feature {
+      margin-bottom: 2rem;
+    }
+
+    .gallery-feature img {
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery-grid {
+      columns: 2 10rem;
+      column-gap: 0.75rem;
+    }
+
+    .gallery-item {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-feature img,
+    .gallery-item img {
+      transition: none;
+    }
+  }
+</style>

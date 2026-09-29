@@ -32,6 +32,10 @@ export const siteConfig = {
         href: '/blog',
       },
       {
+        text: 'Gallery',
+        href: '/gallery',
+      },
+      {
         text: 'Q&A',
         href: '/qa',
       },
