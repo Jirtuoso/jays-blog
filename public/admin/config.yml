@@ -57,7 +57,6 @@ collections:
         format: json
         fields:
           - {label: Page heading, name: title, widget: string}
-          - {label: Intro, name: intro, widget: string}
           - label: Photos
             name: photos
             widget: list
