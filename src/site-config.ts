@@ -36,8 +36,8 @@ export const siteConfig = {
         href: '/gallery',
       },
       {
-        text: 'Q&A',
-        href: '/qa',
+        text: 'Mental Models',
+        href: '/mental-models',
       },
     ],
   },

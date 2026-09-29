@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import ListPosts from '@/components/ListPosts.vue'
 import { getPosts } from '@/utils/posts'
 
 export async function getStaticPaths() {
@@ -10,12 +9,17 @@ export async function getStaticPaths() {
 const posts = await getPosts()
 ---
 
-<BaseLayout
-  title="Writing"
-  description="List of all the writings."
-  pageNav={true}
-  pageOperate={true}
->
-  <h1 class="mb-10 text-title">Writing</h1>
-  <ListPosts list={posts} />
+<BaseLayout title="Writing" description="Writing by Jay Hou.">
+  <article class="prose">
+    <h1 class="text-title">Writing</h1>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </BaseLayout>

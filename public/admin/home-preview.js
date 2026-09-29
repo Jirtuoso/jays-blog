@@ -9,7 +9,8 @@ CMS.registerPreviewTemplate('home', createClass({
     const headerItems = [
       h('img', { src: '/toad-icon.png', alt: 'Jay Hou logo' }),
       h('span', {}, 'Writing'),
-      h('span', {}, 'Q&A'),
+      h('span', {}, 'Gallery'),
+      h('span', {}, 'Mental Models'),
     ]
     const articleItems = [
       h('h1', {}, title),
