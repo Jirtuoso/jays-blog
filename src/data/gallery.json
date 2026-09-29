@@ -2,14 +2,6 @@
   "title": "Gallery",
   "photos": [
     {
-      "src": "/gallery/mountain-lake.jpg",
-      "alt": "Mountain lake below snow-covered peaks",
-      "caption": "Whistler",
-      "source": "https://vsco.co/jirtuoso/media/66b2acbdf7e06a5c8fcb9c95",
-      "width": 1024,
-      "height": 820
-    },
-    {
       "src": "/gallery/iceland-glacier-lagoon.jpg",
       "alt": "Icebergs floating in a lagoon beneath an overcast sky",
       "caption": "Jökulsárlón",
@@ -82,14 +74,6 @@
       "height": 1280
     },
     {
-      "src": "/gallery/forest-cabin.jpg",
-      "alt": "Small cabin in a clearing surrounded by dense forest",
-      "caption": "Forest cabin",
-      "source": "https://vsco.co/jirtuoso/media/67f0652b89ae800770387ae5",
-      "width": 736,
-      "height": 694
-    },
-    {
       "src": "/gallery/yosemite-valley.jpg",
       "alt": "Sunlit mountain valley above a forest",
       "caption": "Yosemite",
@@ -128,6 +112,14 @@
       "source": "https://vsco.co/jirtuoso/media/64052ea110513110590cf265",
       "width": 960,
       "height": 720
+    },
+    {
+      "src": "/gallery/mountain-lake.jpg",
+      "alt": "Mountain lake below snow-covered peaks",
+      "caption": "Whistler",
+      "source": "https://vsco.co/jirtuoso/media/66b2acbdf7e06a5c8fcb9c95",
+      "width": 1024,
+      "height": 820
     }
   ]
 }
