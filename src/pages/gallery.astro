@@ -60,15 +60,6 @@ const [featured, ...photos] = gallery.photos
         ))
       }
     </div>
-
-    <p class="gallery-more">
-      <a
-        href="https://vsco.co/jirtuoso/gallery"
-        target="_blank"
-        rel="noopener noreferrer"
-        >More on VSCO <span aria-hidden="true">↗</span></a
-      >
-    </p>
   </section>
 </BaseLayout>
 
@@ -160,6 +151,7 @@ const [featured, ...photos] = gallery.photos
 
   .gallery-feature {
     margin-bottom: 3rem;
+    max-width: 720px;
   }
 
   .gallery-grid {
@@ -170,22 +162,6 @@ const [featured, ...photos] = gallery.photos
   .gallery-item {
     break-inside: avoid;
     margin-bottom: 2rem;
-  }
-
-  .gallery-more {
-    border-top: 1px solid var(--gallery-line);
-    color: var(--gallery-ink);
-    margin: 1.25rem 0 0;
-    padding-top: 1.25rem;
-    text-align: right;
-  }
-
-  .gallery-more a {
-    text-underline-offset: 0.3em;
-  }
-
-  .gallery-more a:hover {
-    text-decoration: underline;
   }
 
   @media (max-width: 640px) {
