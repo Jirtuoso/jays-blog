@@ -2,14 +2,6 @@
   "title": "Gallery",
   "photos": [
     {
-      "src": "/gallery/iceland-glacier-lagoon.jpg",
-      "alt": "Icebergs floating in a lagoon beneath an overcast sky",
-      "caption": "Jökulsárlón",
-      "source": "https://vsco.co/jirtuoso/media/650a051ac821d574aae7e04d",
-      "width": 960,
-      "height": 1280
-    },
-    {
       "src": "/gallery/joshua-tree-rocks.jpg",
       "alt": "Golden rock formations against a blue sky",
       "caption": "Joshua Tree",
@@ -18,10 +10,50 @@
       "height": 1513
     },
     {
+      "src": "/gallery/city-walk.jpg",
+      "alt": "Sunny city path beside an elevated road and skyline",
+      "caption": "City walk",
+      "source": "https://vsco.co/jirtuoso/media/698ae25f767ddad38171133e",
+      "width": 960,
+      "height": 1280
+    },
+    {
+      "src": "/gallery/yosemite-valley.jpg",
+      "alt": "Sunlit mountain valley above a forest",
+      "caption": "Yosemite",
+      "source": "https://vsco.co/jirtuoso/media/647800f018c085025fc5a209",
+      "width": 960,
+      "height": 1280
+    },
+    {
       "src": "/gallery/cherry-blossoms.jpg",
       "alt": "Pink cherry blossoms framing a tiled roof",
       "caption": "Roppongi",
       "source": "https://vsco.co/jirtuoso/media/66273de14c7e471a5093496e",
+      "width": 960,
+      "height": 1280
+    },
+    {
+      "src": "/gallery/tromso-at-dusk.jpg",
+      "alt": "Coastal city lights at dusk seen from above",
+      "caption": "Tromsø",
+      "source": "https://vsco.co/jirtuoso/media/656f2dd452ed29668ecf4dea",
+      "width": 960,
+      "height": 539
+    },
+    {
+      "src": "/gallery/jiufen-hills.jpg",
+      "alt": "Hillside town beneath low clouds",
+      "caption": "Jiufen",
+      "source": "https://vsco.co/jirtuoso/media/65ff952e52339b6e408d20ab",
+      "width": 960,
+      "height": 1280
+    },
+    {
+      "src": "/gallery/iceland-glacier-lagoon.jpg",
+      "alt": "Icebergs floating in a lagoon beneath an overcast sky",
+      "caption": "Jökulsárlón",
+      "source": "https://vsco.co/jirtuoso/media/650a051ac821d574aae7e04d",
       "width": 960,
       "height": 1280
     },
@@ -42,22 +74,6 @@
       "height": 1023
     },
     {
-      "src": "/gallery/city-walk.jpg",
-      "alt": "Sunny city path beside an elevated road and skyline",
-      "caption": "City walk",
-      "source": "https://vsco.co/jirtuoso/media/698ae25f767ddad38171133e",
-      "width": 960,
-      "height": 1280
-    },
-    {
-      "src": "/gallery/tromso-at-dusk.jpg",
-      "alt": "Coastal city lights at dusk seen from above",
-      "caption": "Tromsø",
-      "source": "https://vsco.co/jirtuoso/media/656f2dd452ed29668ecf4dea",
-      "width": 960,
-      "height": 539
-    },
-    {
       "src": "/gallery/arctic-dogs.jpg",
       "alt": "Dogs looking out from wooden kennels in the snow",
       "caption": "Arctic Circle",
@@ -70,22 +86,6 @@
       "alt": "Camel standing among sand dunes in the Sahara",
       "caption": "Sahara Desert",
       "source": "https://vsco.co/jirtuoso/media/656b4d614b4fa5672a2b0765",
-      "width": 960,
-      "height": 1280
-    },
-    {
-      "src": "/gallery/yosemite-valley.jpg",
-      "alt": "Sunlit mountain valley above a forest",
-      "caption": "Yosemite",
-      "source": "https://vsco.co/jirtuoso/media/647800f018c085025fc5a209",
-      "width": 960,
-      "height": 1280
-    },
-    {
-      "src": "/gallery/jiufen-hills.jpg",
-      "alt": "Hillside town beneath low clouds",
-      "caption": "Jiufen",
-      "source": "https://vsco.co/jirtuoso/media/65ff952e52339b6e408d20ab",
       "width": 960,
       "height": 1280
     },
